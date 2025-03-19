@@ -4,7 +4,6 @@ const axios = require('axios');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// הוסף את ה-API Key שלך כאן
 const API_KEY = 'https://todoapi-1txe.onrender.com/';
 
 app.get('/apps', async (req, res) => {
