@@ -4,13 +4,13 @@ const axios = require('axios');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-const API_KEY = 'https://todoapi-1txe.onrender.com/';
+// const API_KEY = 'https://todoapi-1txe.onrender.com/';
+const API_URL = 'https://todoapi-1txe.onrender.com';
 
 app.get('/apps', async (req, res) => {
     try {
-        const response = await axios.get('https://todolistreact-master-ni2s.onrender.com', {
+        const response = await axios.get(`${API_URL}/selectAll`, {
             headers: {
-                'Authorization': `Bearer ${API_KEY}`,
                 'Content-Type': 'application/json'
             }
         });
